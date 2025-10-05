@@ -1,0 +1,1 @@
+PacketDistributor.sendToAllPlayers(new ${field$packet?replace('CUSTOM:', '')}Message(${input$string}));

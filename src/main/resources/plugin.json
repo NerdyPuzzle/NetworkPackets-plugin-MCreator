@@ -1,0 +1,14 @@
+{
+  "id": "network_packets",
+  "weight": 20,
+  "supportedversions": [
+	2025002
+  ],
+  "javaplugin": "net.nerdypuzzle.packets.Launcher",
+  "info": {
+    "name": "Network Packets",
+    "version": "1.0",
+    "description": "Allows for better communication between the server and the client",
+    "author": "NerdyPuzzle"
+  }
+}
