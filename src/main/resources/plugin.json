@@ -7,7 +7,7 @@
   "javaplugin": "net.nerdypuzzle.packets.Launcher",
   "info": {
     "name": "Network Packets",
-    "version": "1.0",
+    "version": "1.0.1",
     "description": "Allows for better communication between the server and the client",
     "author": "NerdyPuzzle"
   }

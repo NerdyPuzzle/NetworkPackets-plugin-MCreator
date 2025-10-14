@@ -5,7 +5,8 @@ package ${package}.network;
 
 import ${package}.${JavaModName};
 
-@EventBusSubscriber public record ${name}Message(String extradata) implements CustomPacketPayload {
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+public record ${name}Message(String extradata) implements CustomPacketPayload {
 
 	public static final Type<${name}Message> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(${JavaModName}.MODID, "${registryname}"));
 
