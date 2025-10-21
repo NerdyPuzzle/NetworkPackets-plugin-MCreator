@@ -6,6 +6,7 @@ import net.mcreator.ui.component.util.PanelUtils;
 import net.mcreator.ui.init.L10N;
 import net.mcreator.ui.laf.themes.Theme;
 import net.mcreator.ui.modgui.ModElementGUI;
+import net.mcreator.ui.procedure.AbstractProcedureSelector;
 import net.mcreator.ui.procedure.ProcedureSelector;
 import net.mcreator.ui.validation.AggregatedValidationResult;
 import net.mcreator.workspace.elements.ModElement;
@@ -51,8 +52,9 @@ public class PacketGUI extends ModElementGUI<Packet> {
 
     public void reloadDataLists() {
         super.reloadDataLists();
-        serverBound.refreshListKeepSelected();
-        clientBound.refreshListKeepSelected();
+        AbstractProcedureSelector.ReloadContext context = AbstractProcedureSelector.ReloadContext.create(mcreator.getWorkspace());
+        serverBound.refreshListKeepSelected(context);
+        clientBound.refreshListKeepSelected(context);
     }
 
     public void openInEditingMode(Packet packet) {

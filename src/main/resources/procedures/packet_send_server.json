@@ -20,6 +20,12 @@
     "toolbox_id": "packets",
     "fields": [
       "packet"
+    ],
+    "dependencies": [
+      {
+        "name": "world",
+        "type": "world"
+      }
     ]
   }
 }

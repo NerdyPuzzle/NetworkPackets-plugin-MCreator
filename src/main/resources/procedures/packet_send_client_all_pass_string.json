@@ -31,6 +31,12 @@
     ],
     "inputs": [
       "string"
+    ],
+    "dependencies": [
+      {
+        "name": "world",
+        "type": "world"
+      }
     ]
   }
 }
