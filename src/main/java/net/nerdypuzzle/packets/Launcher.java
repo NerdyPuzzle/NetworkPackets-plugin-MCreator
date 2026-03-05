@@ -3,7 +3,7 @@ package net.nerdypuzzle.packets;
 import net.mcreator.plugin.JavaPlugin;
 import net.mcreator.plugin.Plugin;
 import net.mcreator.plugin.events.PreGeneratorsLoadingEvent;
-import net.mcreator.plugin.events.ui.BlocklyPanelRegisterJSObjects;
+import net.mcreator.plugin.events.ui.BlocklyPanelRegisterDOMData;
 import net.nerdypuzzle.packets.parts.PluginElementTypes;
 import net.nerdypuzzle.packets.parts.PluginJavascriptBridge;
 import org.apache.logging.log4j.LogManager;
@@ -18,9 +18,9 @@ public class Launcher extends JavaPlugin {
 		super(plugin);
 
 		addListener(PreGeneratorsLoadingEvent.class, e -> PluginElementTypes.load());
-        addListener(BlocklyPanelRegisterJSObjects.class, e -> {
+        addListener(BlocklyPanelRegisterDOMData.class, e -> {
             pluginJavascriptBridge = new PluginJavascriptBridge(e.getBlocklyPanel().getMCreator());
-            e.getDOMWindow().put("packetbridge", pluginJavascriptBridge);
+            e.addJavaScriptBridge("packetbridge", pluginJavascriptBridge);
         });
 
 		LOG.info("Network Packets plugin was loaded");
