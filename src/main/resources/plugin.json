@@ -2,8 +2,7 @@
   "id": "network_packets",
   "weight": 20,
   "supportedversions": [
-    2026001,
-    202600110319
+    2026001
   ],
   "javaplugin": "net.nerdypuzzle.packets.Launcher",
   "info": {
