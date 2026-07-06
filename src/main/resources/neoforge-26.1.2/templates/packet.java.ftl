@@ -8,7 +8,7 @@ import ${package}.${JavaModName};
 @EventBusSubscriber
 public record ${name}Message(String extradata) implements CustomPacketPayload {
 
-	public static final Type<${name}Message> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(${JavaModName}.MODID, "${registryname}"));
+	public static final Type<${name}Message> TYPE = new Type<>(Identifier.fromNamespaceAndPath(${JavaModName}.MODID, "${registryname}"));
 
 	public static final StreamCodec<RegistryFriendlyByteBuf, ${name}Message> STREAM_CODEC = StreamCodec.of(
 			(RegistryFriendlyByteBuf buffer, ${name}Message message) -> {
