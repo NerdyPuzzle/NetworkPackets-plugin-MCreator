@@ -18,12 +18,12 @@ class FieldPacketSelector extends Blockly.Field {
         this.setTooltip(function () {
             return thisField.getValue() ?
                 thisField.readableName :
-                javabridge.t('blockly.field_data_list_selector.tooltip.empty');
+                translate('blockly.field_data_list_selector.tooltip.empty');
         });
     }
 
     static getDefaultText() {
-        return javabridge.t('blockly.extension.data_list_selector.no_entry');
+        return translate('blockly.extension.data_list_selector.no_entry');
     }
 
     configure_(config) {
@@ -53,7 +53,7 @@ class FieldPacketSelector extends Blockly.Field {
                         Blockly.Events.setGroup(true);
                         thisField.setValue(value);
                         Blockly.Events.setGroup(group);
-                        javabridge.triggerEvent();
+                        translateriggerEvent();
                     }
                 });
             } else {
